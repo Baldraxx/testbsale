@@ -53,7 +53,7 @@ class Shop extends React.Component {
     axios({
       method: "get",
       url:
-        "http://ec2-54-183-147-121.us-west-1.compute.amazonaws.com:8383/v2/markets/1/collection/2/market_info.json" +
+        "https://ec2-54-183-147-121.us-west-1.compute.amazonaws.com:8383/v2/markets/1/collection/2/market_info.json" +
         search,
       headers: { access_token: this.state.token },
       async: false,
@@ -260,7 +260,7 @@ function Titulo(){
         Prueba realizada por Bayron Ramírez Parada, para BSALE.
       </p>
       <p>
-        <Button href="#" variant="primary">Ver Mas...</Button>
+        <Button href="https://github.com/Baldraxx/testbsale" target="_blank" variant="primary">Ver Mas...</Button>
       </p>
     </Jumbotron>
   )
@@ -407,7 +407,7 @@ function CarritoCompra(props) {
   const [modalShow, setModalShow] = useState(false); //estado del modal del carrito
   return (
     <>
-      <Button variant="dark" onClick={props.cantidad>0?() => setModalShow(true):false}>
+      <Button variant="dark" onClick={props.cantidad>0?() => setModalShow(true):undefined}>
         {/* Basge de Cantidad de productos */}
         Carrito <Badge variant="danger">{props.cantidad}</Badge>
       </Button>
